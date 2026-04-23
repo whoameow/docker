@@ -14,14 +14,14 @@ class LoggingHandler(BaseHTTPRequestHandler):
 
         # DEBUG - пиздец сколько логов
         if LOG_LEVEL == 'DEBUG':
-            for i in range(100):
+            for i in range(2):
                 print(f"[DEBUG] Request {request_id} - Processing step {i}")
                 print(f"[DEBUG] Random data: {''.join(random.choices(string.ascii_letters, k=5))}")
                 print(f"[DEBUG] Memory state: {random.randint(1, 2)} bytes")
 
         # INFO - много логов
         elif LOG_LEVEL == 'INFO':
-            for i in range(10):
+            for i in range(2):
                 print(f"[INFO] Request {request_id} - Step {i}")
 
         # PROD - минимум логов
